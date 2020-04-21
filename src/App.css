@@ -1,20 +1,35 @@
-.container {
-  display: flex;
-  flex-direction: column;
+.page {
   margin-left: 20px;
   margin-right: 20px;
 }
+
 .header {
-  display: flex;
+  flex: 1;
   margin-top: 10px;
   flex-direction: column;
 }
-.top {
+
+.container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-.bottom {
+.top {
+  flex-direction: column;
+  width: 180vw;
+  padding-right: 15;
+}
+
+.map-container {
+  width: 500vw;
+  height: 300vh;
+  color: blue;
+}
+
+.icon-attribution {
+  font-size: 0.3em;
+  text-decoration: none;
+  color: grey;
 }
 
 .mapMarkerStyle {
@@ -23,4 +38,9 @@
   width: 50px;
   height: 50px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.mapMarkerStyleClicked {
+  transform: scale(1.5);
 }
