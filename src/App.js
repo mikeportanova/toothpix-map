@@ -56,7 +56,7 @@ const Map = (props) => {
   const [viewport, setViewport] = useState({
     latitude: 34.07868,
     longitude: -118.36145,
-    zoom: 15,
+    zoom: 10,
   });
   const [popup, setPopup] = useState(true);
   const [clickedMarker, setClickedMarker] = useState({ ...initialState });
@@ -78,7 +78,7 @@ const Map = (props) => {
           ...prevState,
           latitude: props.activePost.latitude,
           longitude: props.activePost.longitude,
-          zoom: 15,
+          zoom: 13,
           transitionDuration: 2000,
           transitionInterpolator: new FlyToInterpolator(),
         };
