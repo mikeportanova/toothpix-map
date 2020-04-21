@@ -18,21 +18,21 @@ const toothpix = [
     ),
   },
   {
-    url: "https://www.instagram.com/p/BVCn3cODquO/?utm_source=mp-toothpix",
-    latitude: 34.079182,
-    longitude: -118.361717,
-    name: "Animal Restaurant",
+    url: "https://www.instagram.com/p/BQf0nQwhaYN/?utm_source=mp-toothpix",
+    latitude: 34.1073962,
+    longitude: -118.2544237,
+    name: "Salazar",
     post: (
-      <Post url="https://www.instagram.com/p/BVCn3cODquO/?utm_source=mp-toothpix" />
+      <Post url="https://www.instagram.com/p/BQf0nQwhaYN/?utm_source=mp-toothpix" />
     ),
   },
   {
-    url: "https://www.instagram.com/p/BU9iIV1DiH8/?utm_source=mp-toothpix",
-    latitude: 34.07929,
-    longitude: -118.3614,
-    name: "Cofax",
+    url: "https://www.instagram.com/p/BK6E1f_hVUb/?utm_source=mp-toothpix",
+    latitude: 34.0778254,
+    longitude: -118.1324377,
+    name: "Chengdu Taste",
     post: (
-      <Post url="https://www.instagram.com/p/BU9iIV1DiH8/?utm_source=mp-toothpix" />
+      <Post url="https://www.instagram.com/p/BK6E1f_hVUb/?utm_source=mp-toothpix" />
     ),
   },
   {
