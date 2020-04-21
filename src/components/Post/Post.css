@@ -1,0 +1,10 @@
+.post-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-div > div {
+  align-self: center;
+  justify-self: center;
+}
