@@ -109,7 +109,7 @@ const Map = (props) => {
       {props.posts.map((item, i) => {
         return (
           <Marker latitude={item.latitude} longitude={item.longitude} key={i}>
-            <div className="mapMarkerStyle" />
+            <div className="mapMarkerStyle" onClick={props.handleMarkerClick} />
           </Marker>
         );
       })}
@@ -146,6 +146,7 @@ function App(props) {
   };
   const handleMarkerClick = (e) => {
     setActivePost(toothpix.filter((el) => el.name === e.currentTarget.id)[0]);
+    console.log("marker target", e.currentTarget, "target", e.target);
   };
   return (
     <div className="container">
