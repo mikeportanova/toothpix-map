@@ -7,6 +7,8 @@ import Header from "./components/Header/Header";
 import Post from "./components/Post/Post";
 import logo from "./piggy-bank-facing-right.svg";
 import Sidebar from "./components/Sidebar/Sidebar";
+import SidebarVideo from "./components/SidebarVideo/SidebarVideo";
+import inspectedBy from "./inspectedBy.svg";
 
 const toothpix = [
   {
@@ -161,7 +163,7 @@ const Map = (props) => {
             style={{ width: "auto", height: "auto" }}
             onClick={handleClick}
           >
-            {props.activePost.post}
+            {props.activePost.name}
           </div>
         </Popup>
       )}
@@ -191,15 +193,18 @@ function App(props) {
   };
   return (
     <div className="page">
-      <Header></Header>
       <div className="container">
         <div className="top">
+          <div className="inspectedByContainer">
+            <img src={inspectedBy} alt="" />
+          </div>
           <Sidebar
             posts={toothpix}
             onMouseEnter={onMouseEnter}
             onMouseOut={onMouseOut}
             onClick={handleMarkerClick}
           />
+          <SidebarVideo activePost={activePost} />
         </div>
         <div className="map-container">
           <Map

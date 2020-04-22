@@ -4,7 +4,7 @@ import "./Post.css";
 
 const Post = (props) => {
   return (
-    <div onMouseEnter={props.onMouseEnter} id={props.name}>
+    <div className="post" onMouseEnter={props.onMouseEnter} id={props.name}>
       <InstagramEmbed
         url={props.url}
         maxWidth={320}

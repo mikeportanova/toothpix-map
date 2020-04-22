@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import SidebarItem from "../SidebarItem/SidebarItem";
+import "./Sidebar.css";
 const List = (props) => {
   const items = props.posts.map((item, i) => {
     return (
