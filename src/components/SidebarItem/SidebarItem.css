@@ -1,18 +1,39 @@
 .sidebar-item {
   border: 1px solid black;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1818;
+  color: white;
 }
 
 .sidebar-item:hover {
   background-color: #e803fc;
 }
-
+.sidebar-item-data {
+  flex-direction: column;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
 .sidebar-item-name {
   font-style: bold;
   font-size: 1.4em;
+  flex: 1;
 }
 
 .sidebar-item-address {
+}
+
+.doordash-button-container {
+  text-decoration: none;
+  margin-right: 5px;
+}
+.doordash-button {
+  width: 142px;
+  height: 35px;
+  background-image: url(https://cdn.doordash.com/media/button/button_white_s.svg);
+  color: transparent;
+  text-decoration: none;
 }

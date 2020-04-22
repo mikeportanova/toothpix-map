@@ -136,12 +136,15 @@ const Map = (props) => {
             key={i}
           >
             <div
+              id={item.name}
               className={
                 item.name === props.hoveredPost.name
-                  ? "mapMarkerStyle mapMarkerStyleClicked"
+                  ? "mapMarkerStyle mapMarkerStyleHovered"
                   : "mapMarkerStyle"
               }
               onClick={props.handleMarkerClick}
+              onMouseOver={props.handleMarkerHover}
+              onMouseOut={props.onMouseOut}
             />
           </Marker>
         );
@@ -183,7 +186,8 @@ function App(props) {
   };
 
   const onMouseOut = (e) => {
-    setAnyHovered(false);
+    setHoveredPost({ name: "dummy" });
+    document.getElementById(e.currentTarget.id).style.backgroundColor = "";
     console.log("mouse out");
   };
 
@@ -191,6 +195,14 @@ function App(props) {
     setActivePost(toothpix.filter((el) => el.name === e.currentTarget.id)[0]);
     console.log("marker target", e.currentTarget, "target", e.target);
   };
+
+  const handleMarkerHover = (e) => {
+    console.log("hover pin", e.currentTarget);
+    setHoveredPost(toothpix.filter((el) => el.name === e.currentTarget.id)[0]);
+    document.getElementById(e.currentTarget.id).style.backgroundColor =
+      "#e803fc";
+  };
+
   return (
     <div className="page">
       <div className="container">
@@ -201,7 +213,6 @@ function App(props) {
           <Sidebar
             posts={toothpix}
             onMouseEnter={onMouseEnter}
-            onMouseOut={onMouseOut}
             onClick={handleMarkerClick}
           />
           <SidebarVideo activePost={activePost} />
@@ -213,6 +224,8 @@ function App(props) {
             anyHovered={anyHovered}
             posts={toothpix}
             handleMarkerClick={handleMarkerClick}
+            handleMarkerHover={handleMarkerHover}
+            onMouseOut={onMouseOut}
           ></Map>
         </div>
       </div>

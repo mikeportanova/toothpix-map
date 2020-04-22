@@ -17,7 +17,6 @@
 .top {
   flex-direction: column;
   width: 180vw;
-  padding-right: 15;
 }
 
 .map-container {
@@ -41,6 +40,6 @@
   transition: all 0.2s ease-in-out;
 }
 
-.mapMarkerStyleClicked {
+.mapMarkerStyleHovered {
   transform: scale(1.5);
 }
