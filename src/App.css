@@ -1,8 +1,10 @@
 .page {
   margin-left: 2px;
+  display: flex;
+  flex-direction: column;
 }
 
-.container {
+.top-container {
   display: flex;
   flex-direction: row;
 }
@@ -17,19 +19,21 @@
 }
 .top {
   flex-direction: column;
-  width: 160vw;
+  flex-grow: 1;
+  width: 100vw;
 }
 
 .map-container {
-  width: 500vw;
-  height: 300vh;
+  flex-grow: 5;
+  width: 200vw;
+  max-height: 532px;
   color: blue;
 }
 
-.icon-attribution {
-  font-size: 0.3em;
-  text-decoration: none;
-  color: grey;
+.video-container {
+  flex-grow: 1;
+  min-width: 320px;
+  height: auto;
 }
 
 .mapMarkerStyle {
@@ -41,4 +45,13 @@
 
 .mapMarkerStyleHovered {
   transform: scale(1.5);
+}
+
+.icon-attribution {
+  font-size: 0.3em;
+  text-decoration: none;
+  color: grey;
+}
+
+.bottom-container {
 }

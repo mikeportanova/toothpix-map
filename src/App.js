@@ -118,7 +118,7 @@ const Map = (props) => {
     <MapGL
       {...viewport}
       width="auto"
-      height="90vh"
+      height="532px"
       mapStyle="mapbox://styles/mikeportanova/ck9avra4p0xr11io1w82rxi2n"
       onViewportChange={(nextViewport) => {
         setViewport(nextViewport);
@@ -228,7 +228,7 @@ function App(props) {
 
   return (
     <div className="page">
-      <div className="container">
+      <div className="top-container">
         <div className="top">
           <div className="inspectedByContainer">
             <img src={inspectedBy} alt="" />
@@ -239,6 +239,8 @@ function App(props) {
             onMouseOut={onMouseOut}
             onClick={handleMarkerClick}
           />
+        </div>
+        <div className="video-container">
           <SidebarVideo activePost={activePost} />
         </div>
         <div className="map-container">
@@ -253,6 +255,7 @@ function App(props) {
           ></Map>
         </div>
       </div>
+      <div className="bottom-container"></div>
       <div className="icon-attribution">
         Icons made by{" "}
         <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
