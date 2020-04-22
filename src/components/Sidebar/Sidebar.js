@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import SidebarItem from "../SidebarItem/SidebarItem";
 import "./Sidebar.css";
-const List = (props) => {
+const Sidebar = (props) => {
   const items = props.posts.map((item, i) => {
     return (
       <SidebarItem
@@ -11,10 +11,11 @@ const List = (props) => {
         key={i}
         name={item.name}
         address={item.address}
+        doordashURL={item.doordashURL}
       />
     );
   });
   return <div className="sidebar-container">{items}</div>;
 };
 
-export default List;
+export default Sidebar;

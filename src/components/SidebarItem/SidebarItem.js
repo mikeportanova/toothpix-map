@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./SidebarItem.css";
 
 const SidebarItem = (props) => {
+  const [delivering, setDelivering] = useState(false);
+  useEffect(() => {
+    if (!props.doordashURL == "") {
+      setDelivering(true);
+      console.log("sidebarItem log");
+    }
+  }, [props.doordashURL]);
+  console.log("Doordash URL", props.doordashURL);
   return (
     <div
       className="sidebar-item"
@@ -14,15 +22,19 @@ const SidebarItem = (props) => {
         <div className="sidebar-item-name">{props.name}</div>
         <div className="sidebar-item-address">{props.address}</div>
       </div>
-      <a
-        href="https://www.doordash.com/business/3113/?utm_source=partner-link&utm_medium=website&utm_campaign=3113&utm_content=white-s"
-        target="_blank"
-        alt="Order Food Delivery with DoorDash"
-        title="Order Food Delivery with DoorDash"
-        className="doordash-button-container"
-      >
-        <div className="doordash-button">Order Food Delivery with DoorDash</div>
-      </a>
+      {delivering && (
+        <a
+          href={props.doordashURL}
+          target="_blank"
+          alt="Order Food Delivery with DoorDash"
+          title="Order Food Delivery with DoorDash"
+          className="doordash-button-container"
+        >
+          <div className="doordash-button">
+            Order Food Delivery with DoorDash
+          </div>
+        </a>
+      )}
     </div>
   );
 };

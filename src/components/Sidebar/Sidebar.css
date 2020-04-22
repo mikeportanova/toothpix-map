@@ -1,6 +1,7 @@
 .sidebar-container {
   display: flex;
   flex-direction: column;
-  margin-right: 2px;
+  margin-right: 3px;
   margin-bottom: 15px;
+  margin-left: 1px;
 }

@@ -1,5 +1,5 @@
 .page {
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
 .container {
@@ -11,12 +11,13 @@
   flex-grow: 1;
 }
 .inspectedByContainer > img {
+  margin-top: 3px;
   width: 100%;
   height: auto;
 }
 .top {
   flex-direction: column;
-  width: 180vw;
+  width: 160vw;
 }
 
 .map-container {
@@ -32,10 +33,8 @@
 }
 
 .mapMarkerStyle {
-  background-image: url("./piggy-bank-facing-right.svg");
-  background-size: cover;
-  width: 50px;
-  height: 50px;
+  width: 49.77777px;
+  height: 60px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
