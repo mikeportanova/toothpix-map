@@ -17,7 +17,9 @@ function App() {
   const onMouseEnter = (e) => {
     console.log("Target ", e.currentTarget.id);
     setHoveredPost(
-      toothpix.filter((el) => `sidebar-${el.index}` === e.currentTarget.id)[0]
+      toothpix.filter(
+        (el) => `sidebar-${el.index.toString()}` === e.currentTarget.id
+      )[0]
     );
   };
 
@@ -28,16 +30,27 @@ function App() {
   };
 
   const handleMarkerClick = (e) => {
-    setActivePost(
-      toothpix.filter((el) => `sidebar-${el.index}` === e.currentTarget.id)[0]
-    );
-    console.log("marker target", e.currentTarget, "target", e.target);
+    if (e.currentTarget.id.startsWith("marker")) {
+      setActivePost(
+        toothpix.filter(
+          (el) => `marker-${el.index.toString()}` === e.currentTarget.id
+        )[0]
+      );
+    } else {
+      setActivePost(
+        toothpix.filter(
+          (el) => `sidebar-${el.index.toString()}` === e.currentTarget.id
+        )[0]
+      );
+    }
   };
 
   const handleMarkerHover = (e) => {
     console.log("hover pin", e.currentTarget);
     setHoveredPost(
-      toothpix.filter((el) => `marker-${el.index}` === e.currentTarget.id)[0]
+      toothpix.filter(
+        (el) => `marker-${el.index.toString()}` === e.currentTarget.id
+      )[0]
     );
     document.getElementById(e.currentTarget.id).style.backgroundColor =
       "#e803fc";
@@ -48,7 +61,7 @@ function App() {
     if (document.getElementById(`sidebar-${activePost.index.toString()}`)) {
       document
         .getElementById(`sidebar-${activePost.index.toString()}`)
-        .scrollIntoView();
+        .scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }, [activePost]);
 

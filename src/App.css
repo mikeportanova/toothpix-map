@@ -7,9 +7,9 @@
 .sidebar-container {
   flex-direction: column;
   display: flex;
-  width: 20vw;
   height: 100vh;
   overflow-y: scroll;
+  width: 180vw;
 }
 
 .right-container {
@@ -67,6 +67,7 @@
 
 .mapMarkerStyleHovered {
   transform: scale(1.5);
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .bottom-container {

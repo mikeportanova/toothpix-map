@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SidebarItem.css";
+import jgold from "../../j-gold-transparent.png";
 
 const SidebarItem = (props) => {
   const [active, setActive] = useState(false);
@@ -22,6 +23,11 @@ const SidebarItem = (props) => {
         <div className="sidebar-item-name">{props.post.name}</div>
         <div className="sidebar-item-address">{props.post.streetNumber}</div>
       </div>
+      {props.post.quote && (
+        <div className="gold-icon">
+          <img src={jgold} alt="" />
+        </div>
+      )}
     </div>
   );
 };

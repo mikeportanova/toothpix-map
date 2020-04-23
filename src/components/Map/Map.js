@@ -69,12 +69,7 @@ const Map = (props) => {
       })} */}
       {props.posts.map((item, i) => {
         return (
-          <Marker
-            id={item.name}
-            latitude={item.latitude}
-            longitude={item.longitude}
-            key={i}
-          >
+          <Marker latitude={item.latitude} longitude={item.longitude} key={i}>
             <div
               id={`marker-${item.index}`}
               className={
@@ -104,7 +99,7 @@ const Map = (props) => {
           tipSize={5}
         >
           <div
-            id={props.activePost.name}
+            id={`popup-${props.activePost.index}`}
             style={{ width: "auto", height: "auto" }}
             onClick={handleClick}
           >

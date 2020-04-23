@@ -3,11 +3,11 @@
   margin-bottom: 1px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background-color: #1a1818;
   color: white;
-  min-height: 50px;
+  min-height: 65px;
 }
 
 .sidebar-item:hover {
@@ -34,7 +34,16 @@
 .sidebar-item-address {
   font-size: 0.8em;
 }
+.gold-icon {
+  flex-direction: row;
+  align-items: flex-end;
+  margin-right: 2px;
+}
 
+.gold-icon > img {
+  width: 50px;
+  height: auto;
+}
 .doordash-button-container {
   text-decoration: none;
   margin-right: 5px;

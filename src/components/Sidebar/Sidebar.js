@@ -18,7 +18,7 @@ const Sidebar = (props) => {
       />
     );
   });
-  return <div className="sidebar-container">{items}</div>;
+  return <div className="sidebar-items-list">{items}</div>;
 };
 
 export default Sidebar;
