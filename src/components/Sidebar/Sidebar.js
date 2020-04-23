@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import SidebarItem from "../SidebarItem/SidebarItem";
 import "./Sidebar.css";
 const Sidebar = (props) => {
@@ -8,10 +8,13 @@ const Sidebar = (props) => {
         onMouseEnter={props.onMouseEnter}
         onMouseOut={props.onMouseOut}
         onClick={props.onClick}
-        key={i}
+        key={item.index}
+        post={item}
         name={item.name}
+        index={item.index}
         streetNumber={item.streetNumber}
         doordashURL={item.doordashURL}
+        activePost={props.activePost}
       />
     );
   });

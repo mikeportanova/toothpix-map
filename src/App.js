@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import List from "./components/List/List";
 import Map from "./components/Map/Map";
-import Header from "./components/Header/Header";
-import Post from "./components/Post/Post";
-import logo from "./piggy-bank-facing-right.svg";
+
 import Sidebar from "./components/Sidebar/Sidebar";
 import SidebarVideo from "./components/SidebarVideo/SidebarVideo";
 import inspectedBy from "./inspectedBy.svg";
 import Information from "./components/Information/Information";
 import { toothpix } from "./toothpix";
 
-function App(props) {
-  const [activePost, setActivePost] = useState(null);
+function App() {
+  const [activePost, setActivePost] = useState(
+    toothpix[Math.floor(Math.random() * 40)]
+  );
   const [hoveredPost, setHoveredPost] = useState({ name: "fart" });
 
   const onMouseEnter = (e) => {
     console.log("Target ", e.currentTarget.id);
-    setHoveredPost(toothpix.filter((el) => el.name === e.currentTarget.id)[0]);
+    setHoveredPost(
+      toothpix.filter((el) => `sidebar-${el.index}` === e.currentTarget.id)[0]
+    );
   };
 
   const onMouseOut = (e) => {
@@ -27,16 +28,29 @@ function App(props) {
   };
 
   const handleMarkerClick = (e) => {
-    setActivePost(toothpix.filter((el) => el.name === e.currentTarget.id)[0]);
+    setActivePost(
+      toothpix.filter((el) => `sidebar-${el.index}` === e.currentTarget.id)[0]
+    );
     console.log("marker target", e.currentTarget, "target", e.target);
   };
 
   const handleMarkerHover = (e) => {
     console.log("hover pin", e.currentTarget);
-    setHoveredPost(toothpix.filter((el) => el.name === e.currentTarget.id)[0]);
+    setHoveredPost(
+      toothpix.filter((el) => `marker-${el.index}` === e.currentTarget.id)[0]
+    );
     document.getElementById(e.currentTarget.id).style.backgroundColor =
       "#e803fc";
   };
+
+  useEffect(() => {
+    console.log("FART", activePost.index.toString());
+    if (document.getElementById(`sidebar-${activePost.index.toString()}`)) {
+      document
+        .getElementById(`sidebar-${activePost.index.toString()}`)
+        .scrollIntoView();
+    }
+  }, [activePost]);
 
   return (
     <div className="page">
@@ -46,6 +60,7 @@ function App(props) {
         </div>
         <Sidebar
           posts={toothpix}
+          activePost={activePost}
           onMouseEnter={onMouseEnter}
           onMouseOut={onMouseOut}
           onClick={handleMarkerClick}
@@ -67,9 +82,9 @@ function App(props) {
             ></Map>
           </div>
         </div>
-        <div className="bottom-container">
-          {activePost && <Information place={activePost} />}
-        </div>
+
+        <Information post={activePost} />
+
         <div className="icon-attribution">
           Icons made by{" "}
           <a href="https://www.flaticon.com/authors/freepik" title="Freepik">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MapGL, { Marker, Popup, FlyToInterpolator } from "react-map-gl";
-import * as d3 from "d3-ease";
+import { easeCubic } from "d3-ease";
 import pin from "../../dave-pin.png";
 
 const TOKEN =
@@ -37,7 +37,7 @@ const Map = (props) => {
           zoom: 11,
           transitionDuration: 2000,
           transitionInterpolator: new FlyToInterpolator(),
-          transitionEasing: d3.easeCubic,
+          transitionEasing: easeCubic,
         };
       });
       console.log("Active Post", props.activePost);
@@ -76,9 +76,9 @@ const Map = (props) => {
             key={i}
           >
             <div
-              id={item.name}
+              id={`marker-${item.index}`}
               className={
-                item.name === props.hoveredPost.name
+                item.index === props.hoveredPost.index
                   ? "mapMarkerStyle mapMarkerStyleHovered"
                   : "mapMarkerStyle"
               }

@@ -14,6 +14,12 @@
   background-color: white;
   color: #1a1818;
 }
+
+.sidebar-item-active {
+  background-color: #0194f6 !important;
+  color: white !important;
+}
+
 .sidebar-item-data {
   flex-direction: column;
   margin-left: 5px;
