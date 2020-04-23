@@ -10,7 +10,7 @@ const Sidebar = (props) => {
         onClick={props.onClick}
         key={i}
         name={item.name}
-        address={item.address}
+        streetNumber={item.streetNumber}
         doordashURL={item.doordashURL}
       />
     );
