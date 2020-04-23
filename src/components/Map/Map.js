@@ -3,7 +3,7 @@ import MapGL, { Marker, Popup, FlyToInterpolator } from "react-map-gl";
 import * as d3 from "d3-ease";
 
 const TOKEN =
-  "pk.eyJ1IjoibWlrZXBvcnRhbm92YSIsImEiOiJjazM5YW9mYnIwMTk2M3JwOHF2YXZrMXluIn0.j0plcmSg3-gJkI8duiGbAg";
+  "pk.eyJ1IjoiZGdyZWVuMTIzNDUiLCJhIjoiY2s5YzlraGU1MDJiYjNucXJwMnloMjM5bSJ9.aNnwPqxMlBqMGp9SU6dxfQ";
 
 const Map = (props) => {
   let initialState = {};
@@ -48,12 +48,12 @@ const Map = (props) => {
       {...viewport}
       logoPosition="bottom-right"
       width="100%"
-      height="55vh"
+      height="585px"
       mapOptions={{
         attributionControl: false,
         logoPosition: "bottom-right",
       }}
-      mapStyle="mapbox://styles/mikeportanova/ck9avra4p0xr11io1w82rxi2n"
+      mapStyle="mapbox://styles/dgreen12345/ck9c9owoa0ccq1il7wqo4bunx"
       onViewportChange={(nextViewport) => {
         setViewport(nextViewport);
       }}
