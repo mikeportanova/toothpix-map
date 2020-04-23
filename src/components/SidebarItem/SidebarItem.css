@@ -11,7 +11,8 @@
 }
 
 .sidebar-item:hover {
-  background-color: #e803fc;
+  background-color: white;
+  color: #1a1818;
 }
 .sidebar-item-data {
   flex-direction: column;
