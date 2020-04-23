@@ -7,6 +7,7 @@
   align-items: center;
   background-color: #1a1818;
   color: white;
+  min-height: 50px;
 }
 
 .sidebar-item:hover {
@@ -24,6 +25,7 @@
 }
 
 .sidebar-item-address {
+  font-size: 0.8em;
 }
 
 .doordash-button-container {

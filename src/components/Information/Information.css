@@ -1,0 +1,20 @@
+.information-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.info-left {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2vw;
+  flex-grow: 1;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.info-right {
+  flex-direction: column;
+  flex-grow: 9;
+}
