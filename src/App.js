@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Map from "./components/Map/Map";
 
@@ -57,11 +57,14 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("FART", activePost.index.toString());
-    if (document.getElementById(`sidebar-${activePost.index.toString()}`)) {
+    console.log("FUCK WHAT THEE FUCK", activePost.index);
+    document
+      .getElementById(`sidebar-${activePost.index.toString()}`)
+      .scrollIntoView({ behavior: "smooth", block: "center" });
+    if (document.getElementById(`marker-${activePost.index}`)) {
       document
-        .getElementById(`sidebar-${activePost.index.toString()}`)
-        .scrollIntoView({ behavior: "smooth", block: "center" });
+        .getElementById(`marker-${activePost.index}`)
+        .classList.add("mapMarkerStyleHovered");
     }
   }, [activePost]);
 

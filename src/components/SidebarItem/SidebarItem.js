@@ -17,7 +17,7 @@ const SidebarItem = (props) => {
       onMouseEnter={props.onMouseEnter}
       onMouseOut={props.onMouseOut}
       onClick={props.onClick}
-      id={`sidebar-${props.post.index}`}
+      id={`sidebar-${props.post.index.toString()}`}
     >
       <div className="sidebar-item-data">
         <div className="sidebar-item-name">{props.post.name}</div>

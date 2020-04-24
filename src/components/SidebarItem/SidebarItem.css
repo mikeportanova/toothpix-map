@@ -8,6 +8,7 @@
   background-color: #1a1818;
   color: white;
   min-height: 65px;
+  max-height: 65px;
 }
 
 .sidebar-item:hover {
