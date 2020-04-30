@@ -63,7 +63,7 @@
 
 .mapboxgl-popup-content {
   color: #1a1818;
-  opacity: 70%;
+  opacity: 70% !important;
 }
 
 .popup-content {
