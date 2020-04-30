@@ -99,6 +99,7 @@ function App() {
         </div>
 
         <Information post={activePost} />
+        <div className="black-footer"></div>
 
         <div className="icon-attribution">
           Icons made by{" "}
