@@ -61,10 +61,25 @@
   color: blue;
 }
 
-.map-popup {
+.mapboxgl-popup-content {
   display: flex;
   flex-direction: column;
   color: #1a1818;
+  opacity: 70%;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#popup-name {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#popup-address {
+  font-size: 0.8em;
 }
 
 .video-container {
