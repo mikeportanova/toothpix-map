@@ -49,7 +49,7 @@ const Map = (props) => {
       {...viewport}
       logoPosition="bottom-right"
       width="100%"
-      height="625px"
+      height="100%"
       mapOptions={{
         attributionControl: false,
         logoPosition: "bottom-right",

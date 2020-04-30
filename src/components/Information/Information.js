@@ -35,6 +35,19 @@ const InfoCard = (props) => {
   );
 };
 
+const Location = (props) => {
+  return (
+    <div className="info-left-container">
+      <span className="info-address">{props.post.address}</span>
+      <span className="info-title">{props.post.name}</span>
+      <span className="info-quote">{props.post.quote}</span>
+      <span className="info-quote-gold">
+        {props.post.quote && "-Jonathan Gold"}
+      </span>
+    </div>
+  );
+};
+
 const Information = (props) => {
   const [delivering, setDelivering] = useState(false);
   const [hasQuote, setHasQuote] = useState(false);
@@ -55,7 +68,7 @@ const Information = (props) => {
     return (
       <div className="information-box">
         <div className="info-left">
-          <InfoCard post={props.post} />
+          <Location post={props.post} />
         </div>
         <div className="info-right">
           {props.post.quote && (

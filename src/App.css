@@ -2,13 +2,13 @@
   margin-left: 2px;
   display: flex;
   flex-direction: row;
+  height: 100vh;
 }
 
 .left-container {
   flex-direction: column;
   display: flex;
-  height: 100vh;
-  overflow-y: scroll;
+
   flex-grow: 1;
   min-width: 330px;
   max-width: 330px;
@@ -16,6 +16,8 @@
 .sidebar-container {
   flex-direction: column;
   display: flex;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .right-container {
@@ -57,8 +59,14 @@
   top: 1.55em;
 } */
 
+@media screen and (max-height: 978px) {
+  .map-container {
+    height: 500px;
+  }
+}
+
 .map-container {
-  color: blue;
+  height: 625px;
 }
 
 .mapboxgl-popup-content {
