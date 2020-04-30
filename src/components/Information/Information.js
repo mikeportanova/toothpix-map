@@ -7,6 +7,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import jgold from "../../jgold.jpeg";
 
 const InfoCard = (props) => {
   return (
@@ -57,11 +58,16 @@ const Information = (props) => {
           <InfoCard post={props.post} />
         </div>
         <div className="info-right">
+          {props.post.quote && (
+            <div className="gold-image-container">
+              <img className="gold-image" src={jgold} alt="" />
+            </div>
+          )}
           {/* <div className="quote-container">
             <p className="quote-contents">{props.post.quote}</p>
           </div> */}
 
-          {delivering && (
+          {/* {delivering && (
             <a
               href={props.place.doordashURL}
               target="_blank"
@@ -74,7 +80,7 @@ const Information = (props) => {
                 Order Food Delivery with DoorDash
               </div>
             </a>
-          )}
+          )} */}
         </div>
       </div>
     );

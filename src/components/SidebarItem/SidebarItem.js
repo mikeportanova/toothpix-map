@@ -21,7 +21,6 @@ const SidebarItem = (props) => {
     >
       <div className="sidebar-item-data">
         <div className="sidebar-item-name">{props.post.name}</div>
-        <div className="sidebar-item-address">{props.post.streetNumber}</div>
       </div>
       {props.post.quote && (
         <div className="gold-icon">

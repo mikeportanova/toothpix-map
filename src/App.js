@@ -60,7 +60,7 @@ function App() {
     console.log("FUCK WHAT THEE FUCK", activePost.index);
     document
       .getElementById(`sidebar-${activePost.index.toString()}`)
-      .scrollIntoView({ behavior: "smooth", block: "center" });
+      .scrollIntoView({ behavior: "smooth", block: "end" });
     if (document.getElementById(`marker-${activePost.index}`)) {
       document
         .getElementById(`marker-${activePost.index}`)
@@ -70,33 +70,32 @@ function App() {
 
   return (
     <div className="page">
-      <div className="sidebar-container">
+      <div className="left-container">
         <div className="inspectedByContainer">
           <img src={inspectedBy} alt="" />
+          <SidebarVideo activePost={activePost} />
         </div>
-        <Sidebar
-          posts={toothpix}
-          activePost={activePost}
-          onMouseEnter={onMouseEnter}
-          onMouseOut={onMouseOut}
-          onClick={handleMarkerClick}
-        />
+        <div className="sidebar-container">
+          <Sidebar
+            posts={toothpix}
+            activePost={activePost}
+            onMouseEnter={onMouseEnter}
+            onMouseOut={onMouseOut}
+            onClick={handleMarkerClick}
+          />
+        </div>
       </div>
       <div className="right-container">
-        <div className="top-container">
-          <div className="map-container">
-            <div className="overlay">
-              <SidebarVideo activePost={activePost} />
-            </div>
-            <Map
-              activePost={activePost}
-              hoveredPost={hoveredPost}
-              posts={toothpix}
-              handleMarkerClick={handleMarkerClick}
-              handleMarkerHover={handleMarkerHover}
-              onMouseOut={onMouseOut}
-            ></Map>
-          </div>
+        <div className="map-container">
+          <div className="overlay"></div>
+          <Map
+            activePost={activePost}
+            hoveredPost={hoveredPost}
+            posts={toothpix}
+            handleMarkerClick={handleMarkerClick}
+            handleMarkerHover={handleMarkerHover}
+            onMouseOut={onMouseOut}
+          ></Map>
         </div>
 
         <Information post={activePost} />

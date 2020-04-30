@@ -49,7 +49,7 @@ const Map = (props) => {
       {...viewport}
       logoPosition="bottom-right"
       width="100%"
-      height="585px"
+      height="625px"
       mapOptions={{
         attributionControl: false,
         logoPosition: "bottom-right",
@@ -100,10 +100,12 @@ const Map = (props) => {
         >
           <div
             id={`popup-${props.activePost.index}`}
-            style={{ width: "auto", height: "auto" }}
+            className="map-popup"
+            style={{ width: "auto", height: "auto", opacity: ".8" }}
             onClick={handleClick}
           >
-            {props.activePost.name}
+            <span>{props.activePost.name}</span>
+            <span>{props.activePost.streetNumber}</span>
           </div>
         </Popup>
       )}
