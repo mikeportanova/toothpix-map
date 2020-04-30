@@ -62,8 +62,6 @@
 }
 
 .mapboxgl-popup-content {
-  display: flex;
-  flex-direction: column;
   color: #1a1818;
   opacity: 70%;
 }

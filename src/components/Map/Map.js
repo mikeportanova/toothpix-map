@@ -101,7 +101,7 @@ const Map = (props) => {
           <div
             id={`popup-${props.activePost.index}`}
             className="popup-content"
-            style={{ width: "auto", height: "auto", opacity: ".8" }}
+            style={{ width: "auto", height: "auto" }}
             onClick={handleClick}
           >
             <span id="popup-name">{props.activePost.name}</span>
