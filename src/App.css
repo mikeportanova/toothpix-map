@@ -43,8 +43,15 @@
 }
 .inspectedByContainer > img {
   margin-top: 3px;
-  width: 100%;
   height: auto;
+}
+
+.inspectedByContainer > div {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.inspectedByContainer > div > iframe {
 }
 .instagram-media {
   margin: 0 !important;
@@ -176,7 +183,7 @@
     height: 70px;
   }
   .map-container {
-    height: 40vh;
+    height: 25vh;
   }
   .sidebar-container {
     height: 55px;
