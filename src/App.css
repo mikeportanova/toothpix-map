@@ -190,7 +190,7 @@
     order: 2;
     display: flex;
     justify-content: center;
-    min-height: 0;
+    min-height: 1px;
     margin-bottom: 2em;
   }
   .inspectedByContainer > img {
