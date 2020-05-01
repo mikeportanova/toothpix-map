@@ -96,6 +96,7 @@
     margin-bottom: 0.35em;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     line-height: 1.66;
+    flex-grow: 1;
     min-height: 100%;
   }
   .mobile-gold-image {

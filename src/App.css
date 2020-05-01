@@ -197,4 +197,7 @@
     display: none;
     visibility: hidden;
   }
+  .inspectedByContainer > div {
+    overflow: none;
+  }
 }
