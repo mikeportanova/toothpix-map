@@ -11,6 +11,7 @@ const SidebarItem = (props) => {
       setActive(false);
     }
   }, [props.activePost.index, props.post.index]);
+
   return (
     <div
       className={active ? "sidebar-item sidebar-item-active" : "sidebar-item"}

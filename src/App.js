@@ -9,10 +9,14 @@ import Information from "./components/Information/Information";
 import { toothpix } from "./toothpix";
 
 function App() {
+  const goldReviewed = toothpix.filter((item) => {
+    return item.quote;
+  });
   const [activePost, setActivePost] = useState(
-    toothpix[Math.floor(Math.random() * 40)]
+    goldReviewed[Math.floor(Math.random() * goldReviewed.length)]
   );
   const [hoveredPost, setHoveredPost] = useState({ name: "fart" });
+  const isFirstRender = useRef(true);
 
   const onMouseEnter = (e) => {
     console.log("Target ", e.currentTarget.id);
@@ -57,7 +61,14 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("FUCK WHAT THEE FUCK", activePost.index);
+    if (isFirstRender) {
+      setTimeout(() => {
+        document
+          .getElementById(`sidebar-${activePost.index.toString()}`)
+          .scrollIntoView({ behavior: "smooth", block: "end" });
+      }, 1000);
+      isFirstRender.current = false;
+    }
     document
       .getElementById(`sidebar-${activePost.index.toString()}`)
       .scrollIntoView({ behavior: "smooth", block: "end" });
@@ -86,8 +97,10 @@ function App() {
         </div>
       </div>
       <div className="right-container">
+        <div className="mobile-inspectedByContainer">
+          <img src={inspectedBy} alt="" />
+        </div>
         <div className="map-container">
-          <div className="overlay"></div>
           <Map
             activePost={activePost}
             hoveredPost={hoveredPost}

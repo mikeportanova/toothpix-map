@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import SidebarItem from "../SidebarItem/SidebarItem";
 import "./Sidebar.css";
 const Sidebar = (props) => {
