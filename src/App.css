@@ -153,6 +153,8 @@
   .page {
     display: flex;
     flex-direction: column;
+
+    height: auto;
   }
   .left-container {
     display: flex;
