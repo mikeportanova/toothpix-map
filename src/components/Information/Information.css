@@ -81,7 +81,6 @@
   .info-left-container {
     display: flex;
     flex-direction: column;
-    min-width: 275;
     max-width: 100vw;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   }
@@ -92,7 +91,13 @@
     color: rgba(0, 0, 0, 0.54);
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   }
-
+  .info-quote {
+    font-size: 0.75rem;
+    margin-bottom: 0.35em;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.66;
+    min-height: 100%;
+  }
   .mobile-gold-image {
     display: flex;
   }

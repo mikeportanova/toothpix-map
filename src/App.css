@@ -181,13 +181,13 @@
   }
   .sidebar-container {
     height: 55px;
-    order: 2;
+    order: 3;
 
     /* height: 55px;
     order: 1; */
   }
   .inspectedByContainer {
-    order: 3;
+    order: 2;
     display: flex;
     justify-content: center;
     min-height: 0;
