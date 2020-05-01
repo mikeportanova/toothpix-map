@@ -11,9 +11,18 @@ const SidebarVideo = (props) => {
         containerTagName="div"
         protocol=""
         injectScript
-        onLoading={() => {}}
-        onSuccess={() => {}}
-        onAfterRender={() => {}}
+        onLoading={() => {
+          document
+            .getElementById(`sidebar-${props.activePost.index.toString()}`)
+            .scrollIntoView({ behavior: "smooth", block: "end" });
+          console.log("LOADING");
+        }}
+        onSuccess={() => {
+          console.log("LOADED");
+        }}
+        onAfterRender={() => {
+          console.log("RENDERED");
+        }}
         onFailure={() => {}}
       />
     );

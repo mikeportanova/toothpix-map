@@ -16,7 +16,6 @@ function App() {
     goldReviewed[Math.floor(Math.random() * goldReviewed.length)]
   );
   const [hoveredPost, setHoveredPost] = useState({ name: "fart" });
-  const isFirstRender = useRef(true);
 
   const onMouseEnter = (e) => {
     console.log("Target ", e.currentTarget.id);
@@ -61,14 +60,6 @@ function App() {
   };
 
   useEffect(() => {
-    if (isFirstRender) {
-      setTimeout(() => {
-        document
-          .getElementById(`sidebar-${activePost.index.toString()}`)
-          .scrollIntoView({ behavior: "smooth", block: "end" });
-      }, 1000);
-      isFirstRender.current = false;
-    }
     document
       .getElementById(`sidebar-${activePost.index.toString()}`)
       .scrollIntoView({ behavior: "smooth", block: "end" });
