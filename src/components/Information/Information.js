@@ -9,7 +9,7 @@ const Location = (props) => {
       <span className="info-title">{props.post.name}</span>
       <span className="info-quote">{props.post.quote}</span>
       <span className="info-quote-gold">
-        {props.post.quote && "-Jonathan Gold"}
+        {props.post.quote && "- Jonathan Gold"}
       </span>
     </div>
   );

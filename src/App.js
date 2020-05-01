@@ -76,6 +76,11 @@ function App() {
         <div className="inspectedByContainer">
           <img src={inspectedBy} alt="" />
           <SidebarVideo activePost={activePost} />
+          <div className="mobile-attribution">
+            <a href="https://www.mapbox.com/about/maps/" target="_blank">
+              Maps &copy; Mapbox &copy; OpenStreetMap
+            </a>
+          </div>
         </div>
         <div className="sidebar-container">
           <Sidebar
@@ -105,15 +110,7 @@ function App() {
         <Information post={activePost} />
         <div className="black-footer"></div>
 
-        <div className="icon-attribution">
-          Icons made by{" "}
-          <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-            Freepik
-          </a>{" "}
-          from{" "}
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>
+        <div className="attribution">
           <a href="https://www.mapbox.com/about/maps/" target="_blank">
             Maps &copy; Mapbox &copy; OpenStreetMap
           </a>
