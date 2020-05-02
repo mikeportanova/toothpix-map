@@ -112,8 +112,6 @@ function App() {
         </div>
 
         <Information post={activePost} />
-        <div className="black-footer"></div>
-
         <div className="attribution">
           <a
             href="https://www.mapbox.com/about/maps/"

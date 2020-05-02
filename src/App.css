@@ -114,9 +114,11 @@
   font-size: 0.2em;
   text-decoration: none;
   color: grey;
+
+  position: absolute;
   bottom: 0;
   right: 0;
-  width: auto;
+  flex-grow: 9;
   order: 10;
 }
 
