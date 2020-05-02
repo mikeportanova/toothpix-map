@@ -131,7 +131,7 @@
   visibility: hidden;
 }
 
-.black-footer {
+/* .black-footer {
   flex-grow: 1;
   width: 100%;
   overflow: hidden;
@@ -153,7 +153,7 @@
   right: 0;
   position: absolute;
   z-index: -1;
-}
+} */
 
 @media only screen and (max-width: 420px) {
   .page {

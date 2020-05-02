@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MapGL, { Marker, Popup, FlyToInterpolator } from "react-map-gl";
 import { easeCubic } from "d3-ease";
-import pin from "../../dave-pin.png";
+import pin from "../../dave-pin.webp";
 
 const TOKEN =
   "pk.eyJ1IjoiZGdyZWVuMTIzNDUiLCJhIjoiY2s5YzlraGU1MDJiYjNucXJwMnloMjM5bSJ9.aNnwPqxMlBqMGp9SU6dxfQ";

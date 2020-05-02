@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SidebarItem.css";
-import jgold from "../../j-gold-transparent.png";
+import jgold from "../../j-gold-transparent.webp";
 
 const SidebarItem = (props) => {
   const [active, setActive] = useState(false);
