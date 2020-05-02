@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Map from "./components/Map/Map";
 
@@ -77,7 +77,11 @@ function App() {
           <img src={inspectedBy} alt="" />
           <SidebarVideo activePost={activePost} />
           <div className="mobile-attribution">
-            <a href="https://www.mapbox.com/about/maps/" target="_blank">
+            <a
+              href="https://www.mapbox.com/about/maps/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Maps &copy; Mapbox &copy; OpenStreetMap
             </a>
           </div>
@@ -111,7 +115,11 @@ function App() {
         <div className="black-footer"></div>
 
         <div className="attribution">
-          <a href="https://www.mapbox.com/about/maps/" target="_blank">
+          <a
+            href="https://www.mapbox.com/about/maps/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Maps &copy; Mapbox &copy; OpenStreetMap
           </a>
         </div>
