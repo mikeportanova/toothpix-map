@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import "./Information.css";
-import jgold from "../../jgold.webp";
+import jgold from "../../jgold.jpeg";
 
 const Location = (props) => {
   return (
